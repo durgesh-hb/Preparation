@@ -4,6 +4,6 @@ public class p1 {
     public static void main(String[] args) {
         System.out.println("hello world");
         System.out.println("hello bro this is my first git psuh");
-        System.out.println("If you are seeing this means your in the branch 2");
+        System.out.println("this changes is done in the github remote");
     }
 }
