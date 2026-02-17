@@ -10,6 +10,10 @@ public class linear_search {
         int target2 = 7;
         int ans2 = linearsearch(nums, target2);
         System.out.println(ans2); // returns -1 because target2's number not in the nums array
+
+        // for min value
+        int min=minvalue(nums);
+        System.out.println(min);
     }
 
     static int linearsearch(int[] arr, int target){
@@ -27,7 +31,18 @@ public class linear_search {
         return -1;
     }
 
+    // function for find min and max value 
     static int minvalue(int[] arr){
-        return 0;
+        if(arr.length==0){
+            return -1;
+        }
+
+        int min=arr[0];
+        for(int i=0; i<arr.length; i++){
+            if(arr[i]>min){
+                min=arr[i];
+            }
+        }
+        return min;
     }
 }
