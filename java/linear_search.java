@@ -26,4 +26,8 @@ public class linear_search {
         // if no elements found matching with target then retrun the -1
         return -1;
     }
+
+    static int minvalue(int[] arr){
+        return 0;
+    }
 }
