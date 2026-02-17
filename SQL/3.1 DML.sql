@@ -123,9 +123,3 @@ FROM Students_Table WHERE stu_class = 9 AND stu_age = 16;
 #where at least one must be true. It is useful when searching for multiple criteria,
 #such as retrieving customers from either New York or Los Angeles.
 
-
-
-
-
-select stu_name from students
-limit 3;
