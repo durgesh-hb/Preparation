@@ -7,7 +7,8 @@ public class binary_search{
         int ans=biinear_search(arr, target);
         System.out.println(ans);
     }
-
+    //Divide the array → check → move left/right → repeat 
+    
     static int biinear_search(int[] arr, int target){
          int start = 0;
          int end = arr.length - 1;
