@@ -92,9 +92,9 @@ from employee
 group by department
 having count(EmpName) > 3;
 -- Show departments having more than 3 employees
+  
 
-
-#display city where total salary > 200000
+--display city where total salary > 200000
 
 select city, sum(salary) as totoalcsalary
 from employee 
@@ -103,7 +103,7 @@ having totoalcsalary > 200000;
 -- Show cities where total salary is greater than 200000
 
 
-# Show departments where average salary is greater than 60000
+-- Show departments where average salary is greater than 60000
 select department, avg(salary) as vv
 from employee
 group by department
@@ -111,7 +111,7 @@ having vv > 60000;
 -- Departments with average salary greater than 60000
 
 
-# Display cities where minimum salary is less than 30000
+--Display cities where minimum salary is less than 30000
 select city, min(salary) as ss
 from employee
 group by city 
