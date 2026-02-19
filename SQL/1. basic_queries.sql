@@ -1,112 +1,116 @@
+-- Select the student database
 use student;
+
+-- Show all tables in the current database
 show tables;
-select * from stu_info;
-insert into stu_info values(7,"raju","CS");
 
-alter table stu_info add marks decimal(5,2);
+-- Display all records from students table
+select * from students;
 
-update stu_info set marks = 60.22 where stu_ID = 1;
-alter table stu_info drop column email;
-desc stu_info;
+-- Insert a new record with all column values
+insert into students values(13,"jack jill","ME");
 
-alter table stu_info 
-drop column marks;
+-- Insert record into specific columns only
+insert into students (name,branch)
+values("jackkk m ","CSE");
 
-update stu_info
-set marks = 36.22
-where stu_ID in (2,6);
+-- Add a new column 'marks'
+alter table students add marks decimal(5,2);
 
-select * from stu_info
-order by marks asc;
+-- Modify the datatype of 'marks' column
+ALTER TABLE students
+MODIFY COLUMN marks DECIMAL(5,2);
 
-select branch , count(*) as branchcount
-from stu_info 
+-- Add a new column 'age'
+alter table students add age int;
+
+-- Drop the 'marks' column
+ALTER TABLE students
+DROP COLUMN marks;
+
+-- Update marks for selected IDs
+UPDATE students
+SET marks = 88.77
+WHERE id IN (1, 3, 8, 12, 14);
+
+-- Update marks for another set of IDs
+UPDATE students
+SET marks = 77.77
+WHERE id IN(2, 4, 6, 7, 10);
+
+-- Update marks again for selected IDs
+UPDATE students
+SET marks = 77.77
+WHERE id IN(5, 11, 13, 10);
+
+-- Update marks for ID = 9
+UPDATE students
+SET marks = 60
+WHERE id = 9;
+
+-- Display students from CSE branch
+select * from students where branch="CSE";
+
+-- Order students by marks in descending order
+select * from students order by marks desc;
+
+-- Order students by marks in ascending order
+select * from students order by marks asc;
+
+-- Count students in each branch
+select branch ,count(*) as branchcount
+from students 
 group by branch;
 
-select marks , count(*) as avgmarks
-from stu_info
-group by marks;
+-- Count students for each marks value
+select marks ,count(*) as markscount from students 
+group by marks; 
 
-select stu_name, count(*) as samenames
-from stu_info
-group by stu_name;
+-- Update age to 21 for selected IDs
+update students 
+set age =21
+where id in (2,4,6,8,10);
 
-update stu_info 
-set stu_name = "Ramu"
-where stu_ID = 6;
+-- Update age again to 21 for same IDs
+update students 
+set age =21
+where id in (2,4,6,8,10);
 
-select * from stu_info;
+-- Update age to 22 for selected IDs
+update students 
+set age =22
+where id in (3,5,7,9,11);
 
-select stu_name, count(*) as samenames
-from stu_info
-group by stu_name;
+-- Update age to 20 for selected IDs
+update students 
+set age =20
+where id in (12,13,14);
 
-alter table stu_info add age int;
+-- Show marks where average age is greater than 21
+select marks ,avg(age) as avgage
+from students 
+group by marks 
+having avg(age) > 21;
 
-update stu_info 
-set age = 20
-where stu_ID = 1;
+-- Count total number of students
+select count(*) as totalstudents 
+from students ;
 
-desc stu_info;
+-- Calculate total age of students
+select sum(age) as totalage
+from students;
 
+-- Calculate total marks
+select sum(marks ) as totalmarks 
+from students;
 
-select stu_name, avg(age) as avgage
-from stu_info
-group by stu_name
-having avg(age)<25;
+-- Calculate average age
+select avg(age) as avgage
+from students;
 
-select count(*) as sunofage
-from stu_info;
+-- Find minimum and maximum age
+select min(age) as minage ,max(age) as maxage 
+from students ;
 
-select avg(age) as sunofage
-from stu_info;
-
-select min(age) as mimage, 
-max(age) as maxage
-from stu_info;
-
-select * from stu_info;
-
-select * from stu_info 
-where age=20;
-
-alter table stu_info add email varchar(25);
-
-select * from stu_info;
-order by age asc;
-
-select branch, count(*) as totalage
-from stu_info
-group by branch;
-
-select min(age) as minimumage, max(age) maxage
-from stu_info;
-
-select stu_name
-from stu_info
-where marks ;
-
-select count(*) as total
-from stu_info;
-
-select * from stu_info;
-
-select count(*) as total_student
-from stu_info;
-
-select stu_name, age, age + 1 as new_age
-from stu_info
-order by age desc
-limit 1 offset 5;
-
-select count(*) as total_number_stu
-from stu_info;
-
-delete from stu_info
-where stu_id= 02;
-
-insert into stu_info values(22,"Gowda","AI",70,21);
-
-select * 
-from stu_info 
-where age >=30;
+-- Display table structure
+DESC students;
