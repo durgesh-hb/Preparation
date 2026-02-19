@@ -63,7 +63,8 @@ from students
 group by branch;
 
 -- Count students for each marks value
-select marks ,count(*) as markscount from students 
+select marks ,count(*) as markscount 
+from students 
 group by marks; 
 
 -- Update age to 21 for selected IDs
@@ -112,5 +113,5 @@ from students;
 select min(age) as minage ,max(age) as maxage 
 from students ;
 
--- Display table structure
+-- Display table structure 
 DESC students;
