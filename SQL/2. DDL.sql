@@ -24,10 +24,10 @@ drop column aaddrreess;
 alter table sample 
 modify name varchar(30);
 
-#truncate
+# 3.truncate
 truncate table sample;
 
-# 3. drop
+# 4. drop
 # just an droping the table type
 # drop table table_name
 
