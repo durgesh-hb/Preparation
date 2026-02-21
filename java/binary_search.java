@@ -1,5 +1,3 @@
-package Preparation.java;
-
 public class binary_search{
     public static void main(String[] args) {
         int[] arr={4, 6, 1, 2, 16, 7, 8, 12,};
