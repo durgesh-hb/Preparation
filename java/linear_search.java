@@ -18,7 +18,7 @@ public class linear_search {
     static int linearsearch(int[] arr, int target){
         // retruns -1 if array in empty
         if(arr.length==0){
-            return -1;
+            return -1; 
         }
         //check for element at every index if it is = target
         for(int index=0; index<arr.length; index++){
