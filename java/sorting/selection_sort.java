@@ -21,6 +21,5 @@ public class selection_sort {
             arr[smallest]=arr[i];
             arr[i]=temp;
         }
-    
 }
 }
