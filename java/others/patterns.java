@@ -6,8 +6,10 @@ public class patterns{
     }
 
     static void pattern1(int n){
-        for(int i=0; i<=n; i++){
-            for(int j=1; j<=n; j++){
+        //outter loop for row
+        for(int row=0; row<=n; row++){
+            //inner loop for calumn
+            for(int cal=1; cal<=n; cal++){
                 System.out.print("* ");
             }
             System.out.println(" ");
