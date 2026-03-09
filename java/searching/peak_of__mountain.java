@@ -1,3 +1,4 @@
+package searching;
 public class peak_of__mountain{
     public static void main(String[] args) {
     int[] nums={0, 1, 2, 2, 2, 0, 6};
