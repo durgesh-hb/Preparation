@@ -3,7 +3,7 @@ package Access_Modifiers;
 class MathUtils{
     public static int n; //can access this variable anywhere
 
-    public static int add(int a, int b){ //also this 
+    public static int add(int a, int b){ //also this
         return a + b;
     }
 
