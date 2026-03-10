@@ -1,7 +1,7 @@
 package methods;
 
 public class instance {
-    
+
     void show() {
         System.out.println("Instance Method");
     }

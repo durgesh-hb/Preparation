@@ -1,6 +1,6 @@
 package methods;
 
-public class Static {
+public class Static_ {
 
     static void show() {
         System.out.println("Static Method");
@@ -8,7 +8,7 @@ public class Static {
 
     public static void main(String[] args) {
 
-        Static.show(); // calling static method directly
+        Static_.show(); // calling static method directly
 
     }
 
