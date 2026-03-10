@@ -22,5 +22,11 @@ public class swap_variable {
         {
             //XOR Swap: a = a ^ b; b = a ^ b; a = a ^ b;
         }
+
+        // Method 4: swap in one line without temp
+
+        int a=10;
+		int b=5;
+		a=(a+b)-(b=a);
     }
 }
