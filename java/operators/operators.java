@@ -1,4 +1,4 @@
-package java.operators;
+package operators;
 
 public class operators {
 	public static void main(String[] args) {
@@ -7,7 +7,7 @@ public class operators {
 		//1. Arithmetic Operators [ +,-,/,*,%]
 		
 		//2. Unary Operators
-			
+		
 		  // Integer declared
             int a = 200;
             int b = 10;
