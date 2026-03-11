@@ -20,7 +20,7 @@ public class largestOf3 {
 		}else {
 			System.out.println("C is the larges t  ");
 		}
-	
+		
     }
     
 }
