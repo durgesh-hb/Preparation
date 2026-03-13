@@ -1,7 +1,7 @@
 package constructors;
 
 public class parameterized {
-    
+
     int roll;
 	String name;
 	
