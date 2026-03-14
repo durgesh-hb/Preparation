@@ -27,7 +27,7 @@ public class copycons {
 		// TODO Auto-generated method stub
 			
 		copycons s1=new copycons(300, "Ravi kumar");
-		copycons s2=new copycons(s1);  // copying object
+		copycons s2=new copycons(s1);  // copying object value of s1
 		
 		s1.display();
 		s2.display();
