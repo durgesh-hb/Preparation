@@ -9,7 +9,7 @@ public class add2arrays {
 		int b[]= {4,5,6};
 		
 		for (int i=0;i<a.length;i++) {
-			
+ 
 			System.out.print(a[i]+b[i]); //2+4, 3+5, 4+6
 		}
 	}
