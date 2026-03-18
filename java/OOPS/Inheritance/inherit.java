@@ -1,5 +1,5 @@
 // ===============================
-// 🔥 INHERITANCE FULL REVISION
+//  INHERITANCE FULL REVISION
 // ===============================
 package OOPS.Inheritance;
 // Parent Class
