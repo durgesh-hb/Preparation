@@ -16,6 +16,8 @@ public class arrticket {
 		}
 		
 		arraytic(arr);
+
+    sc.close();
 	}
 	
 	static void arraytic(int[] arr) {

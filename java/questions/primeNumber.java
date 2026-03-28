@@ -11,6 +11,8 @@ public class primeNumber{
 		}else {
 			System.out.println("is not prime ");
 		}
+
+        sc.close();
     }
 
     static boolean prime(int n) {
