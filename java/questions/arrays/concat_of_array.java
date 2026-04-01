@@ -1,27 +1,26 @@
 package questions.arrays;
-import java.util.TreeSet;
+import java.util.Arrays;
 public class concat_of_array {
-    public static void main(String[] args) {
-		// TODO Auto-generated method stub
 		
-		TreeSet<String> s=new TreeSet<String>();
-		
-		
-		s.add("nithin");
-		s.add("esha");
-		s.add("durgesh");
-		s.add("adithya");
-		System.out.println(s); // store in the ordered 
-		
-		s.remove("durgesh"); // can't leave the black have to give the value to remove
-		
-		System.out.println(s);
-		
-		System.out.println("accessing the elements = " + s.contains("adithya"));
-		
-		//Iterating
-		for(String value : s) {
-			System.out.println(value);
-		}
-	}
+		public static void main(String[] args) {
+            // TODO Auto-generated method stub
+    
+            int array[] = {1, 2, 3};		
+            int ans[] = con(array);
+            System.out.println(Arrays.toString(ans));
+        }
+        
+        static int[] con(int[] arr){
+            
+            int size = arr.length;
+            
+            int[] newarr =new int[size * 2]; //create twice the original array 
+            
+            for(int i=0; i<arr.length; i++) {// simultaneously storing one value in two index
+                newarr[i] = arr[i];
+                newarr[i + size] = arr[i];
+            }
+            
+            return newarr;
+        }
 }
