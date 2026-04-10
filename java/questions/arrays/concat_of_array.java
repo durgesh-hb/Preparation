@@ -14,7 +14,7 @@ public class concat_of_array {
             
             int size = arr.length;
             
-            int[] newarr =new int[size * 2]; //create twice the original array 
+            int[] newarr =new int[size *2]; //create twice the original array 
             
             for(int i=0; i<arr.length; i++) {// simultaneously storing one value in two index
                 newarr[i] = arr[i];
