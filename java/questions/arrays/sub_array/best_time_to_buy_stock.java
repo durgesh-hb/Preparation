@@ -1,6 +1,6 @@
-package questions.arrays;
+package questions.arrays.sub_array;
 
-public class best_time_to_huy_stcok {
+public class best_time_to_huy_stock {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {7, 1, 5, 3, 6, 4};
@@ -23,4 +23,5 @@ public class best_time_to_huy_stcok {
 		}
 		return maxprofit;
 	}
+
 }
