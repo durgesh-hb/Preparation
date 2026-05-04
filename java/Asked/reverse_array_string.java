@@ -1,39 +1,47 @@
 package Asked;
-import java.util.HashSet;
+import java.util.Arrays;
 public class reverse_array_string {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		int[] arr = {1, 2, 3, 3, 2, 4, 5, 1};
-//		duplicates(arr);
-		dup(arr);
+		int[] arr = {1, 2, 3, 4, 5};
+		reverse_arr(arr);
+		System.out.println(Arrays.toString(arr));
+		
+		String word = "hello";
+		String ans = revers_string(word);
+		System.out.println(ans);
 	}
 	
-	static void duplicates(int[] arr) { //with extra space
+	static void reverse_arr(int[] arr) {
 		
-		HashSet<Integer> s = new HashSet<>();
+		int left = 0;
+		int right = arr.length-1;
+		 while(left < right) {
+			 int temp = arr[left];
+			 arr[left] = arr[right];
+			 arr[right] = temp;
+			 left++;
+			 right--;
+		 }
+	}
+
+	static String revers_string(String s) {
 		
-		for(int num : arr) {
-			
-			if(s.contains(num)) {
-				System.out.println(num);
-			}else {
-				s.add(num);
-			}
+		char[] ch=s.toCharArray();
+		
+		int left = 0;
+		int right = ch.length-1;
+		
+		while(left < right) {
+			char temp = ch[left];
+			ch[left] = ch[right];
+			ch[right] = temp;
+			left++;
+			right--;
 		}
 		
+		return new String(ch);
 	}
 	
-	static void dup(int[] arr) { //without extra space but o(n2)
-		
-		for(int i=0; i<arr.length; i++) {
-			for(int j= i+1; j<arr.length; j++) {
-				if(arr[i] == arr[j]) {
-					System.out.println(arr[i]);
-				    break;
-				}
-			}
-		}
-		
-	}
 }
