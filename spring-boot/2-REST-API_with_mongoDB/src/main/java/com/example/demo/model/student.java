@@ -5,6 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.Date;
 
+
+@Getter
+@Setter //lombok library is used here for genereting getter's and setter's automatically
 @Document //means data should store in this formate
 public class  student {
 
