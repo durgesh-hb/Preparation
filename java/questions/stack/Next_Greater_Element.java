@@ -22,6 +22,8 @@ public class Next_Greater_Element {
 		for(int num : arr2) {
 			
 			while(!stack.isEmpty() && num > stack.peek()) { 
+//				If current cannot beat top, it can NEVER beat elements below top, Because below elements are even bigger.
+//				That’s the whole monotonic decreasing property.				
 				
 				int poped = stack.pop();
 				map.put(poped, num);
