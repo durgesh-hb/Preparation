@@ -18,7 +18,6 @@ public class Stack_Expression_Evaluation {
 		int result = expression_evaluation(arr);
 		System.out.println(result);
 		
-
 	}
 	
 	static int expression_evaluation(String[] arr) {
