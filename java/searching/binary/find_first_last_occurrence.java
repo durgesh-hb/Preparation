@@ -1,6 +1,6 @@
 package searching.binary;
 
-public class find_first_last_occerrence {
+public class find_first_last_occurrence {
     
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
