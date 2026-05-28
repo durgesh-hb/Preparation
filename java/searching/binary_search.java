@@ -24,6 +24,7 @@ public class binary_search{
          return mid;
      }
      }
-     return -1;
+     return -1; //for not found element if want return the 
+                //where the target should be added to return there index, return start instead of -1
 }
 }
