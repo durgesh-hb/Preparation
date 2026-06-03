@@ -29,7 +29,8 @@ public class search_in_rorated_array {
 			//check mid where array is sorted in two half's
 			if(arr[start] < arr[mid]) {
 				
-				// Check if target belongs to the sorted half
+				// Check if target belongs to the sorted half 
+                // left half sorted
 				if(target >= arr[start] && target < arr[mid]) {
 					end = mid - 1;
 				}else {
@@ -38,6 +39,7 @@ public class search_in_rorated_array {
 			}else {
 				
 				// Check if target belongs to the sorted half
+                // right half sorted
 				if(target <= arr[end] && target > arr[mid]) {
 					start = mid + 1;
 				}else {
