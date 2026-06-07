@@ -13,7 +13,7 @@ public class find_dup_original_num {
 //		Output: [2,3]
 		
 		int[] arr = {1,1};
-		int[] ans = dup(arr);
+		int[] ans = cyclic(arr);
 		System.out.println(Arrays.toString(ans));
 		
 	}
@@ -44,4 +44,33 @@ public class find_dup_original_num {
 		return new int [] {duplicate, missing};
 	}
 
+	static int[] cyclic(int[] arr) {
+		
+		int i = 0;
+		while(i<arr.length) {
+			int correct_index=arr[i]-1;
+			
+			if(arr[i] != arr[correct_index]) {
+				swap(arr, i, correct_index);
+			}else {
+				i++;
+			}
+		}
+		
+		for(int j=0; j<arr.length; j++) {
+			if(arr[j] != j+1) {
+				return new int [] {arr[j], j+1};
+			}
+		}
+		return new int [] {-1, -1};
+	}
+	
+	static void swap(int[] arr, int a, int b) {
+		
+		int temp = arr[a];
+		arr[a] = arr[b];
+		arr[b] = temp;
+		
+	}
+	
 }
