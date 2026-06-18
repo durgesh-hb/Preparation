@@ -1,4 +1,4 @@
-package revision.arrays;
+package revision.others;
 
 public class count_vowels {
     public static void main(String[] args) {
