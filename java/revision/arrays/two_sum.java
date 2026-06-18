@@ -1,4 +1,4 @@
-package revision;
+package revision.arrays;
 import java.util.HashMap;
 import java.util.Arrays;
 public class two_sum {
