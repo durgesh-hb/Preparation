@@ -1,6 +1,5 @@
-create database practice7;
-use practice7;
-
+create database prac;
+use prac;
 CREATE TABLE Employees (
     EmpID INT PRIMARY KEY,
     EmpName VARCHAR(50),
@@ -42,117 +41,91 @@ INSERT INTO Projects VALUES
 (209, 'Brand Promotion', 109, 85000),
 (210, 'AI Chatbot', 110, 175000);
 
-show tables ;
+select  * from Employees;
 
-#1 Find employees working in the IT department.
+select * from Employees
+where Department = "IT";
 
-select * from employees 
-where Department="IT";
+select * from Employees
+where salary > 50000;
 
-#2. Display employees with salary greater than 50,000.
+select * from Employees
+where HireDate > 2022-01-01;
 
-select * from employees
-where salary>50000;
+select EmpName, salary
+from Employees
+where salary = (select max(salary) from Employees);
 
-#3.Show employees hired after 2022-01-01.
-select * from employees
-where HireDate >2022-01-01;
+select 	count(*)
+from Employees;
 
-# 4. Find the maximum with name  salary.
-select EmpName,salary from employees
-where salary=(select max(salary)from employees);
+select sum(salary) as total_sum
+from Employees;
 
-
-#5. Count total employees.
-
-select count(*)from employees;
-
-
-#6 Find total salary paid by the company.
-select sum(salary) as total_salary from employees;
-
-#7 Find total employees in each department.
-
-select count(*) ,Department
-from employees
+select count(*) as count, Department as Dept
+from Employees
 group by Department;
 
-
-# 8 Find average salary department-wise.
-select avg(salary ) as avg_salary , department 
-from employees
+select Department,avg(salary) as avg_sal
+from Employees
 group by Department;
 
-# 9  Find maximum salary in each department with employee name
-SELECT Department, EmpName, Salary
-FROM Employees e
-WHERE Salary = (
-    SELECT MAX(Salary)
-    FROM Employees
-    WHERE Department = e.Department
-);
+select Department, EmpName
+from Employees e
+where salary = (
+				select max(salary)
+                from Employees
+                where Department = e.Department);
+                
+select * from Employees;
 
 
-#9 Display employees ordered by salary ascending.
+select e.EmpName , p.ProjectName
+from employees e
+join projects p
+on e.EmpID = p.EmpId;
 
-select * from employees 
-order by salary asc;
+select e.EmpName, e.Department, p.Budget
+from Employees e
+join projects p
+on e.EmpId = p.EmpID;
 
-#  Having 
- #  Write a query to display departments having more than 2 employees.
+select e.EmpName
+from Employees e
+join projects p
+on e.EmpID = p.EmpId
+where p.Budget > 100000;
 
-select department ,count(*) as toemp
-from employees
-group by department 
-having toemp>2;
+select p.ProjectName, e.Department
+from Employees e
+join projects p
+on e.EmpID = p.EmpID
+where e.Department = "IT";
 
+select e.EmpName, e.Department, p.Budget
+from Employees e
+join projects p
+on e.EmpID = p.EmpID
+where p.Budget = (
+				select max(Budget)
+                from projects);
+                
+select Department, count(*) as tot
+from Employees
+group by Department
+having tot > 2;
 
+select Department
+from Employees
+group by Department
+having avg(salary) > 55000;
 
+select max(salary)
+from Employees
+where salary < (select max(salary) from Employees);
 
-
-## joins 
- # 10 Display employee name and project name.alter
-SELECT e.EmpName, p.ProjectName
-FROM Employees e
-JOIN Projects p
-ON e.EmpID = p.EmpID;
-
-select * from employees ;
-select * from Projects ;
-
-
-# 11  Display employee name, department, and project budget.
-
-select e.EmpName,e.department,p.budget
- from Employees e
- join projects p
-
- on e.EmpID=p.EmpId;
- 
-
- #12  Find employees working on projects with budget greater than 1,00,000.
- 
- select e.EmpName,e.department,p.budget
- from Employees e
- join projects p
- on e.EmpID=p.EmpId
-   where budget>100000 ;
-   
-   #13 Display project names assigned to IT employees.
-   select e.EmPName,e.department,p.ProjectName
-   from Employees e
-   join projects p
-  on e.EmpID=p.EmpID
-  where e.department="IT";
-  
-  #14 Find the employee working on the highest budget project.
-select e.EmpName,p.budget
- from Employees e
- join Projects p
- on e.EmpID=p.EmpID
- where p.budget=(select max(Budget) from projects);
- 
- 
-# 15  Find the second highest salary.
-
-
+select salary, Empname
+from Employees
+order by salary desc
+limit 1
+offset 1;
