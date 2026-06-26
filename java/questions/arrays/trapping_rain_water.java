@@ -4,9 +4,36 @@ public class trapping_rain_water {
     public static void main(String[] args) {
         // TODO Auto-generated method stub
 		int[] arr = {3, 0, 1, 3};
-		int ans = trappedwater(arr);
+		int ans = trapping(arr);
 		System.out.println(ans);
     }
+
+    static int trapping(int[] arr) {
+		
+		int left = 0;
+		int right = arr.length-1;
+		 
+		int leftmax = 0;
+		int rightmax  = 0;
+		
+		int totalwater = 0;
+		
+		while(left < right) {
+			
+			leftmax = Math.max(leftmax, arr[left]);
+			rightmax = Math.max(rightmax, arr[right]);
+			
+			if(leftmax < rightmax) {
+				totalwater += leftmax - arr[left];
+				left++;
+			}else {
+				totalwater += rightmax - arr[right];
+				right--;
+			}
+			
+		}
+		return totalwater;
+	}
 
     static int trappedwater(int[] height){
 
