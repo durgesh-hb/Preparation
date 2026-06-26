@@ -14,12 +14,40 @@ public class Squares_of_Sorted_Array {
 		
 		
 		
-		int[] arr = {1, 4,2, 4, 3};
-		int[] ans = square(arr);
-		System.out.println(Arrays.toString(ans));
+		int[] arr = {-4, -1, 0, 3, 10};
+		square(arr);
+		// System.out.println(Arrays.(ans));
 	}
 	
-	static int[] square(int[] arr) {
+	static void square(int[] arr) {
+		
+		int[] ans = new int[arr.length];
+		
+		int left = 0;
+		int right = arr.length-1;
+		int p = arr.length-1;
+		
+		while(left <= right) {
+			
+			int lsq = arr[left] * arr[left];
+			int rsq = arr[right] * arr[right];
+			
+			if(lsq > rsq) {
+				ans[p--] = lsq;
+				left++;
+			}else {
+				ans[p--] = rsq;
+				right--;
+			}
+			
+		}
+		
+		for(int num : ans) {
+			System.out.println(num);
+		}
+	}
+
+	static int[] square2(int[] arr) {
 		int temp =0;
 		for(int i=0; i<arr.length; i++) {
 			
