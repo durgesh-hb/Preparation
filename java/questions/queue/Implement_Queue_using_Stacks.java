@@ -38,7 +38,7 @@ public class Implement_Queue_using_Stacks {
 
 		Implement_Queue_using_Stacks queue = new Implement_Queue_using_Stacks();
 		
-		    queue.push(10);
+		    queue.push(10); 
 	        queue.push(20);
 	        queue.push(30);
 
