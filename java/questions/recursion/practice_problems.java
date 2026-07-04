@@ -18,4 +18,25 @@ public class practice_problems {
 		
 		fun1(n-1);
 	}
+
+    static void fun2(int n) {
+		
+		if(n == 0) {
+			return;
+		}
+		
+		fun2(n-1);
+		System.out.println(n);
+		
+	}
+	
+	static int fun3(int n) {
+		
+		if(n == 0) {
+			return 0;
+		}
+		
+		return n + fun3(n-1);
+		
+	}
 }
