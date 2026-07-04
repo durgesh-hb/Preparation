@@ -39,4 +39,13 @@ public class practice_problems {
 		return n + fun3(n-1);
 		
 	}
+
+    static int fact(int n) {
+		
+		if(n <= 1) {
+			return 0;
+		}
+		
+		return n * fact(n-1);
+	}
 }
