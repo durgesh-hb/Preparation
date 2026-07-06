@@ -10,7 +10,7 @@ public class linear_search {
 	
 	static boolean linear_search(int[] arr, int target, int index) {
 		//base condition
-		if(index == arr.length-1) {
+		if(index == arr.length) {
 			return false;
 		}
 		
