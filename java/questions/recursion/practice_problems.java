@@ -4,7 +4,7 @@ public class practice_problems {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		System.out.println(countdigit(12345));;
+		System.out.println(fibonacci(12));;
 		
 	}
 	
@@ -67,5 +67,14 @@ public class practice_problems {
 		
 		return 1 + countdigit(n / 10);
 		
+	}
+
+	static int fibonacci(int n) {
+		
+		if( n <= 1) {
+			return n; // for fib(1) gives = 1, and fib(0) gives = 0
+		}			  // fib(1) + fib(0)
+		
+		return fibonacci(n-1) + fibonacci(n - 2);
 	}
 }
