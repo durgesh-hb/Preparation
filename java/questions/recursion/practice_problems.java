@@ -4,7 +4,7 @@ public class practice_problems {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		fun1(5);
+		System.out.println(countdigit(12345));;
 		
 	}
 	
@@ -30,22 +30,42 @@ public class practice_problems {
 		
 	}
 	
-	static int fun3(int n) {
+	static int sum(int n) {
 		
 		if(n == 0) {
 			return 0;
 		}
 		
-		return n + fun3(n-1);
+		return n + sum(n-1);
 		
 	}
 
-    static int fact(int n) {
+    static int factorial(int n) {
 		
-		if(n <= 1) {
+		if(n == 0) {
 			return 0;
 		}
 		
-		return n * fact(n-1);
+		return n * factorial(n-1);
+	}
+
+	static int sumdigit(int n) {
+		
+		if(n == 0) {
+			return 0;
+		}
+		
+		return (n%10) + sumdigit(n / 10);
+		
+	}
+
+	static int countdigit(int n) {
+		
+		if(n <= 0) {
+			return 0;
+		}
+		
+		return 1 + countdigit(n / 10);
+		
 	}
 }
