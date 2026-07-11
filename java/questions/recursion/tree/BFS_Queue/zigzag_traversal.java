@@ -1,11 +1,13 @@
-package questions.recursion.tree.BFS;
+package questions.recursion.tree.BFS_Queue;
 
-
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class right_left_view {
-    static class node{
+public class zigzag_traversal {
+	
+
+	static class node{
 		int data;
 		node left;
 		node right;
@@ -17,7 +19,7 @@ public class right_left_view {
 	}
 	}
 	
-	static void left_view(node root) {
+	static void zigzag(node root) {
 		
 		if(root == null) {
 			return;
@@ -27,18 +29,18 @@ public class right_left_view {
 		
 		queue.offer(root);
 		
+		boolean leftTOright = true;
+		
 		while(!queue.isEmpty()) {
 			
 			int size = queue.size();
 			
+			ArrayList<Integer> list = new ArrayList<>();
+			
 			for(int i=0; i<size; i++) {
 				
 				node current = queue.poll();
-				
-				if(i == 0) {
-					System.out.println(current.data);
-					
-				}
+				list.add(current.data);
 				
 				if(current.left != null) {
 					queue.offer(current.left);
@@ -47,53 +49,30 @@ public class right_left_view {
 				if(current.right != null) {
 					queue.offer(current.right);
 				}
-				
 			}
-			System.out.println();
-		}
-		
-	}
-	
-static void right_view(node root) {
-		
-		if(root == null) {
-			return;
-		}
-		
-		Queue<node> queue = new LinkedList<>();
-		
-		queue.offer(root);
-		
-		while(!queue.isEmpty()) {
 			
-			int size = queue.size();
+			if(leftTOright) {
+				
+				for(int i=0; i<size; i++) {
+					System.out.print(list.get(i) + " ");
+				}
+				
+			}else {
+				
+				for(int i=size-1; i>=0; i--) {
+					System.out.print(list.get(i) + " ");
+				}
 			
-			for(int i=0; i<size; i++) {
-				
-				node current = queue.poll();
-				
-				if(i == size - 1) {
-					System.out.println(current.data);
-					
-				}
-				
-				if(current.left != null) {
-					queue.offer(current.left);
-				}
-				
-				if(current.right != null) {
-					queue.offer(current.right);
-				}
-				
 			}
+
 			System.out.println();
+			leftTOright = !leftTOright;
 		}
-		
+			
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
 		node root = new node(1);
 		
 		root.left = new node(2);
@@ -105,8 +84,8 @@ static void right_view(node root) {
 		root.right.left = new node(6);
 		root.right.right = new node(7);
 		
-//		left_view(root);
-		
-		right_view(root);
+		zigzag(root);
+
 	}
+
 }

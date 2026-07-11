@@ -1,4 +1,4 @@
-package questions.recursion.tree.BFS;
+package questions.recursion.tree.BFS_Queue;
 
 import java.util.LinkedList;
 import java.util.Queue;
