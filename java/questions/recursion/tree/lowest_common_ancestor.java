@@ -23,11 +23,11 @@ public class lowest_common_ancestor {
 			return root;
 		}
 		
-		node left = lowest_ancestor(root.left, p, q);
-		node right = lowest_ancestor(root.right, p, q);
+		node left = lowest_ancestor(root.left, p, q); //return found or not 
+		node right = lowest_ancestor(root.right, p, q); //return found or not
 		
 		
-		if(left != null && right != null) {
+		if(left != null && right != null) { //both side found some thing(p & q)
 			return root;
 		}
 		
