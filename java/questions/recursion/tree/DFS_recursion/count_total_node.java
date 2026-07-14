@@ -1,6 +1,6 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
-public class maximum_value_in_tree {
+public class count_total_node {
     static class node{
 		int data;
 		node left;
@@ -12,24 +12,23 @@ public class maximum_value_in_tree {
 		this.right= null;
 	}
 	}
-
-	static int maximum_value(node root) {
-			
+	
+	static int countnode(node root) {
+		
 		if(root == null) {
-			return Integer.MIN_VALUE;
+			return 0;
 		}
 		
-		int left = maximum_value(root.left);
-		int right = maximum_value(root.right);
+		int left = countnode(root.left);
+		int right = countnode(root.right);
 		
-		return Math.max(left, Math.max(root.data, right));
-		
+		return left + right + 1;
 		
 	}
-	
+
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		
+
 		node root = new node(50);
 		
 		root.left = new node(30);
@@ -37,7 +36,8 @@ public class maximum_value_in_tree {
 		
 		root.left.left = new node(20);
 		
-		System.out.println(maximum_value(root));
+		System.out.println(countnode(root));
+		
 		
 	}
 }

@@ -1,6 +1,6 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
-public class search_in_a_BST {
+public class invert_the_tree {
     static class node{
 		int data;
 		node left;
@@ -13,25 +13,36 @@ public class search_in_a_BST {
 	}
 	}
 	
-	static boolean search(node root, int target) {
+	static void invert(node root) {
+	
+		if(root == null) {
+			return;
+		}
+		
+		node temp = root.left;
+		root.left = root.right;
+		root.right = temp;
+		
+		invert(root.left);
+		invert(root.right);
+		
+	}
+	
+	static void preorder(node root) {
 		
 		if(root == null) {
-			return false;
+			return;
 		}
 		
-		if(root.data == target) {
-			return true;
-		}
-		if(root.data < target) {
-			return search(root.right,target);
-		}
-	
-		return search(root.left, target);
+		System.out.print(root.data + " ");
+		
+		preorder(root.left);
+		preorder(root.right);
 	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+		
 		node root = new node(50);
 		
 		root.left = new node(30);
@@ -43,6 +54,10 @@ public class search_in_a_BST {
 		root.right.left = new node(70);
 		root.right.right = new node(90);
 		
-		System.out.println(search(root,20));
+		invert(root);
+		
+		preorder(root);
+		
 	}
+
 }

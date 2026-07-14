@@ -1,4 +1,4 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
 public class lowest_common_ancestor {
     static class node{

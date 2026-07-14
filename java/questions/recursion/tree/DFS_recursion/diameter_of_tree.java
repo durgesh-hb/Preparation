@@ -1,4 +1,4 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
 public class diameter_of_tree {
     static class node{

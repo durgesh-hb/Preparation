@@ -1,4 +1,4 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
 public class Balanced_Binary_Tree {
     static class node{

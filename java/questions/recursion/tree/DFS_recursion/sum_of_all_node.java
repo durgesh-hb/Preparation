@@ -1,6 +1,6 @@
-package questions.recursion.tree;
+package questions.recursion.tree.DFS_recursion;
 
-public class Height_of_a_Binary_Tree {
+public class sum_of_all_node {
     static class node{
 		int data;
 		node left;
@@ -13,18 +13,19 @@ public class Height_of_a_Binary_Tree {
 	}
 	}
 	
-	static int height(node root) {
+	static int sumnode(node root) {
 		
 		if(root == null) {
 			return 0;
 		}
 		
-		int left = height(root.left);
-		int right = height(root.right);
+		int left = sumnode(root.left);
+		int right = sumnode(root.right);
 		
-		return Math.max(left, right) + 1; // plus means count itself
+		return left + right + root.data;
 		
 	}
+	
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -36,8 +37,7 @@ public class Height_of_a_Binary_Tree {
 		
 		root.left.left = new node(20);
 		
-		System.out.println(height(root));
-
+		System.out.println(sumnode(root));
 		
 	}
 }
