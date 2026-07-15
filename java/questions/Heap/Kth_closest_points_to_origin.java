@@ -26,7 +26,7 @@ static int[][] origin(int[][] arr, int k){
         int distanceA = a[0]*a[0] + a[1]*a[1];
         int distanceB = b[0]*b[0] + b[1]*b[1];
 
-        return distanceA - distanceB;
+        return distanceB - distanceA;
 
     });
 
