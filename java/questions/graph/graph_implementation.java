@@ -6,8 +6,8 @@ public class graph_implementation {
 
     public static void main(String[] args) {
 		
-	//	graph();
-        graph_auto();
+		graph();
+       // graph_auto();
 	}
 	
 	public static void graph() {
