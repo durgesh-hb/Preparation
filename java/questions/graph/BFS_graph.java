@@ -45,7 +45,7 @@ public class BFS_graph {
 			BFS_queue(graph, 0);
 		}
 	
-	
+	// Breadth first print level by level
 	static void BFS_queue(ArrayList<ArrayList<Integer>> graph, int start) {
 		
 		boolean[] visited = new boolean[graph.size()];
