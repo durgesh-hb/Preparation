@@ -10,6 +10,18 @@ public class find_missing_and_dup_no {
 		System.out.println(ans);
 		
 	}
+	 // using the sum formula
+	 public int missingNumber(int[] nums) {
+        
+        int n = nums.length;
+        int sum = n *(n + 1) / 2;
+        int arrsum = 0;
+        for(int i=0; i<n; i++){
+            arrsum += nums[i];
+        }
+   		return sum - arrsum;
+	 }
+	
 	//only 0 to n
 	static int missing(int[] arr) {
 		
