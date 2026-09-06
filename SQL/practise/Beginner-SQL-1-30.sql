@@ -186,5 +186,79 @@ select *
 from orders
 where status = 'delivered';
 
+-- P11 List every unique country represented in the `customers` table.
+select distinct country from customers;
+
+-- P12 Find all products in the Electronics category.
+ select * 
+ from products
+ where category = 'electronics';
+ 
+ -- P13 Find employees earning between 40,000 and 80,000.
+select * 
+from employees
+where salary between 40000 and 80000;
+
+-- P14 Find customers from Bengaluru or Mumbai.
+select * 
+from customers 
+where city = 'bengaluru'or city = 'mumbhai';
+
+select *
+from customers
+where city IN ('bengaluru', 'mumbai');
+
+-- P15 Find customers whose names start with the letter A.
+select *
+from customers
+where customer_name LIKE 'A%';
+
+-- P16 Find products with fewer than 10 units in stock.
+select * 
+from products
+where stock_quantity < 100;
+
+-- P17 Find all pending orders and display their IDs and amounts.
+select order_id, total_amount
+from orders
+where status = 'pending';
+
+-- p18 Find orders whose total amount exceeds 5000.
+select * 
+from orders
+where total_amount > 50000;
+
+select * from departments;
+select * from employees;
+
+-- P19 Find employees belonging to department 1 or department 2.
+select * 
+from employees
+where department_id = 1 OR department_id = 2;
+
+-- P20 Find employees who do not have a manager.
+select * 
+from employees
+where manager_id is null;
+
+-- P21 Find the total number of employees.
+select count(*) from employees;
+
+-- P22 Calculate the average salary of all employees.
+select avg(salary) from employees;
+
+-- P23 Find the maximum and minimum employee salary.
+select max(salary), min(salary) from employees;
+
+-- P24 Calculate the total value of all orders, excluding cancelled orders.
+select sum(total_amount)
+from orders
+where status <> 'pending';
+
+-- p25 Show how many customers belong to each country.
+select country, count(customer_id)
+from customers
+group by country;
+
 
 
