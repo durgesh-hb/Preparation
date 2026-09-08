@@ -259,6 +259,3 @@ where status <> 'pending';
 select country, count(customer_id)
 from customers
 group by country;
-
-
-
