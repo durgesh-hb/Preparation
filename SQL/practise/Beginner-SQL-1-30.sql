@@ -259,3 +259,39 @@ where status <> 'pending';
 select country, count(customer_id)
 from customers
 group by country;
+
+-- P26 Calculate the average salary for each department.
+select avg(salary) , department_id
+from employees
+group by department_id;
+
+select * from products;
+
+-- P27 Count products in every category.
+select count(product_name), category
+from products
+group by category;
+
+-- P28 Find departments having more than five employees.
+select count(employee_id) as num, department_id
+from employees
+group by department_id
+having num > 1;
+
+-- P29 Classify employees as High, Medium, or Low salary.
+select first_name, salary,
+case
+when salary >= 80000 then 'high'
+when salary >= 50000 then 'medium'
+else 'low'
+end as salary_level
+from employees;
+
+-- P30 Display each employee's name and department name.
+select 
+	e.first_name,
+    e.last_name,
+    d.department_name
+from employees e
+join departments d
+on e.department_id = d.department_id;
