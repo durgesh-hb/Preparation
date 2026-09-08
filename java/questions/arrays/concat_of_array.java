@@ -8,6 +8,8 @@ public class concat_of_array {
             int array[] = {1, 2, 3};		
             int ans[] = con(array);
             System.out.println(Arrays.toString(ans));
+            // output 
+            // [1, 2, 3, 1, 2, 3]
         }
         
         static int[] con(int[] arr){
