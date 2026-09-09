@@ -26,7 +26,7 @@ public class maximum_subarray_sum {
 // Both use sliding window.
 // Main difference = when we update.
 
-    static int maxi(int[] arr, int target) {
+    static int mini(int[] arr, int target) {
 
         int start = 0;
         int sum = 0;
@@ -48,7 +48,7 @@ public class maximum_subarray_sum {
         return min_length;
     }
 
-    static int mini(int[] arr, int target) {
+    static int max(int[] arr, int target) {
 
         int start = 0;
         int sum = 0;
