@@ -1,47 +1,47 @@
 package com.example.demo.controller;
 
 import com.example.demo.model.student;
+import com.example.demo.repository.StudentRepository;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/students")
 public class studentcontroller {
-    // temporary storage: id -> student object
-    Map<Integer, student> studata = new HashMap<>();
+
+    private final StudentRepository studentRepository;
+
+    public studentcontroller(StudentRepository studentRepository) {
+        this.studentRepository = studentRepository;
+    }
 
     @GetMapping("/allstu")
-    public List<student> getall(){
-        return new ArrayList<>(studata.values());
+    public List<student> getall() {
+        return studentRepository.findAll();
     }
 
     @PostMapping("/addstu")
-    public String addstu(@RequestBody student mystu){
-        // store student using id as key
-        studata.put(mystu.getid(), mystu);
+    public String addstu(@RequestBody student mystu) {
+        studentRepository.save(mystu);
         return "Student added";
     }
-    
-    //get by id
-    @GetMapping("id/{id}")
-    public student findstu(@PathVariable int id){
-        return studata.get(id);
+
+    @GetMapping("/id/{id}")
+    public student findstu(@PathVariable int id) {
+        return studentRepository.findById(id).orElse(null);
     }
 
-    @DeleteMapping("del/{id}")
-    public String delete(@PathVariable int id){
-         studata.remove(id);
-         return "deleted";
+    @DeleteMapping("/del/{id}")
+    public String delete(@PathVariable int id) {
+        studentRepository.deleteById(id);
+        return "deleted";
     }
 
-    // update
-    @PutMapping("id/{id}")
-    public String updatebyid(@PathVariable int id, @RequestBody student stu){
-        studata.put(id,stu);
+    @PutMapping("/id/{id}")
+    public String updatebyid(@PathVariable int id, @RequestBody student stu) {
+        stu.setid(id);
+        studentRepository.save(stu);
         return "Student " + id + " updated";
     }
 }
