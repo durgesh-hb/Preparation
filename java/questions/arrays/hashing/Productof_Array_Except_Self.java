@@ -1,10 +1,14 @@
 package questions.arrays.hashing;
 
+import java.util.Arrays;
+
 public class Productof_Array_Except_Self {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] arr = {1, 2, 3, 4};
-		 product(arr);
+		//product(arr);
+
+		 System.out.println(Arrays.toString(product2(arr)));
 		 
 	}
 	static void product(int[] arr) {
@@ -38,6 +42,24 @@ public class Productof_Array_Except_Self {
 		for(int nums : newarr) {
 			System.out.print(nums + " ");
 		}
+	}
+
+	// brute force
+	public static int[] product2(int[] arr){
+
+		int[] result = new int[arr.length];
+
+		for(int left = 0; left <arr.length; left++){
+			int prod = 1;
+			for(int right = 0; right < arr.length; right++){
+				if(left == right){
+					continue;
+				}
+				prod *= arr[right];
+			}
+			result[left] = prod;
+		}
+		return result;
 	}
 
 }
