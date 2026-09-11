@@ -8,9 +8,33 @@ public class Productof_Array_Except_Self {
 		int[] arr = {1, 2, 3, 4};
 		//product(arr);
 
-		 System.out.println(Arrays.toString(product2(arr)));
+		 System.out.println(Arrays.toString(prod(arr)));
+
+
 		 
 	}
+
+	static int[] prod(int[] arr){
+
+		int n = arr.length;
+		int[] result = new int[n];
+
+		// calculate left or prefix product 
+		int leftproduct = 1;
+		for(int i=0; i<n; i++){
+			result[i] = leftproduct;
+			leftproduct *= arr[i];
+		}
+		// calculate right or suffix product
+		int rightproduct = 1;
+		for(int i=n-1; i>=0; i--){
+			result[i] *= rightproduct;
+			rightproduct *= arr[i];
+		}
+
+		return result;
+	}
+
 	static void product(int[] arr) {
 		int n= arr.length;
 		int[] leftproduct = new int[n];
