@@ -105,3 +105,38 @@ select * from products;
 select * from customers;
 select * from orders;
 select * from order_items;
+
+-- P41 Display each employee and their manager's name.
+
+-- P42 Find employees whose salary is greater than their department's average salary.
+select first_name, salary
+from employees e
+where salary > ( select avg(salary)
+				from employees
+                where department_id = e.department_id
+                );
+
+-- P43 Find all employees who earn the maximum salary.
+select first_name, salary
+from employees
+where salary = (select max(salary)
+				from employees);
+                
+-- P44 Find the second highest distinct employee salary.
+select max(salary) as max_salary
+from employees
+where salary < (select max(salary)
+				from employees);
+
+
+select first_name, salary
+from employees
+order by salary desc
+limit 1
+offset 1;
+
+-- P45 Find salary values shared by more than one employee.
+select salary, count(*) as countemp
+from employees
+group by salary
+having count(*) > 1;
