@@ -95,9 +95,6 @@ on p.product_id = o.product_id
 group by p.product_id
 order by total desc
 limit 5;
-  
-
-
 
 select * from departments;
 select * from employees;
