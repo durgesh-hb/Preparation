@@ -13,3 +13,13 @@ from customers c
 left join Orders o
 on c.id = o.CustomerID
 where o.id is null;
+
+176. Second Highest Salary
+
+# Write your MySQL query statement below
+select max(salary) as SecondHighestSalary
+from employee
+where salary < (
+    select max(salary)
+    from employee
+);
