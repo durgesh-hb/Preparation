@@ -4,6 +4,7 @@ select w1.id
 from Weather w1
 join weather w2
  ON w2.recordDate = DATE_SUB(w1.recordDate, INTERVAL 1 DAY)
+-- Take today's date (w1.recordDate), subtract one day, and find that date in w2.
 where w1.temperature > w2.temperature;
 
 183. Customers Who Never Order
@@ -23,6 +24,20 @@ where salary < (
     select max(salary)
     from employee
 );
+
+/*suppose  
+salary
+------
+100
+80
+60
+
+it becomes like this 
+SELECT MAX(salary)
+FROM employee
+WHERE salary < 100;
+*/
+
 
 177. Nth Highest Salary
 
