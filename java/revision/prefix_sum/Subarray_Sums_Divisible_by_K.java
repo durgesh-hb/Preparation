@@ -6,11 +6,13 @@ public class Subarray_Sums_Divisible_by_K {
 
     public static void main(String[] args) {
 
-        
+        int[] arr = {4,5,0,-2,-3,1};
+        int k = 5;
+        System.out.println(subarraysDivByK(arr,k));
 
     }
 
-    public int subarraysDivByK(int[] nums, int k) {
+    public static int subarraysDivByK(int[] nums, int k) {
 
         HashMap<Integer, Integer> map = new HashMap<>();
 
