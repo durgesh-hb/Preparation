@@ -77,3 +77,13 @@ left join bonus b
 on e.empid = b.empid
 where b.bonus <= 1000 or b.bonus is null;
 
+610
+select x, y, z, 
+IF(
+    x + y > z 
+    AND x + z > y 
+    AND y + z > x, 
+    'Yes',
+    'No'
+) as triangle
+from triangle
