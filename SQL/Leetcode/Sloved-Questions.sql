@@ -55,3 +55,18 @@ set m = n -1;
     offset m
   );
 END
+
+619 Biggest Single Number
+SELECT MAX(num) AS num
+FROM (
+    SELECT num
+    FROM MyNumbers
+    GROUP BY num
+    HAVING COUNT(num) = 1
+) AS x;
+
+511 Game Play Analysis I
+select player_id , min(event_date) as first_login
+from activity
+group by player_id;
+
