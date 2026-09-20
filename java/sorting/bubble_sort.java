@@ -12,6 +12,7 @@ public class bubble_sort {
         
     }
     static void bubble(int[] arr){
+     // Outer loop tracks the number of passes through the array
     for(int i=0; i<arr.length;i++){
         boolean swapped=false;
         for(int j=1;j<arr.length-i;j++){
