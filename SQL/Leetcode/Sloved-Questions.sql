@@ -77,6 +77,13 @@ left join bonus b
 on e.empid = b.empid
 where b.bonus <= 1000 or b.bonus is null;
 
+607
+SELECT name 
+FROM SalesPerson 
+WHERE sales_id NOT IN (
+  
+);
+
 610
 select x, y, z, 
 IF(
