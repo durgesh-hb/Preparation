@@ -12,7 +12,6 @@ class thread extends Thread{ //this is one type for creating thread through exte
     public void run(){ // run method is overriden from Thread class
         System.out.println(task + getName());
     }
-
 }
 
 public class ex {
