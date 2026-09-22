@@ -41,6 +41,7 @@ CREATE TABLE employees (
         REFERENCES employees(employee_id)
 );
 
+-- employee table
 INSERT INTO employees
 (employee_id, first_name, last_name, email, department_id, manager_id, salary, hire_date, city)
 VALUES
