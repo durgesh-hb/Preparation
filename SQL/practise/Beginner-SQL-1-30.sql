@@ -2,6 +2,8 @@ show databases;
 use practise;
 show tables;
 
+ -- sample table's & data values are already added
+ 
 CREATE TABLE departments (
     department_id INT PRIMARY KEY,
     department_name VARCHAR(100) NOT NULL
