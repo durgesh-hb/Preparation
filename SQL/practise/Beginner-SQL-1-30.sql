@@ -99,6 +99,7 @@ from employees
 order by salary desc
 limit 5;
 
+-- customer table
 CREATE TABLE customers (
     customer_id INT PRIMARY KEY,
     customer_name VARCHAR(100) NOT NULL,
@@ -108,6 +109,7 @@ CREATE TABLE customers (
     signup_date DATE
 );
 
+-- inserting value to customer
 INSERT INTO customers
 (customer_id, customer_name, email, city, country, signup_date)
 VALUES
