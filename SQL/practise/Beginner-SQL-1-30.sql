@@ -3,7 +3,7 @@ use practise;
 show tables;
 
  -- sample table's & data values are already added
- 
+
 CREATE TABLE departments (
     department_id INT PRIMARY KEY,
     department_name VARCHAR(100) NOT NULL
@@ -21,6 +21,8 @@ INSERT INTO departments (department_id, department_name) VALUES
 (9, 'Research'),
 (10, 'Legal');
 
+
+-- employee table 
 CREATE TABLE employees (
     employee_id INT PRIMARY KEY,
     first_name VARCHAR(50) NOT NULL,
