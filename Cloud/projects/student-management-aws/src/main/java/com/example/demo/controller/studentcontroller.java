@@ -9,13 +9,14 @@ import java.util.List;
 @RestController
 @RequestMapping("/students")
 public class studentcontroller {
-
+    
     private final StudentRepository studentRepository;
 
     public studentcontroller(StudentRepository studentRepository) {
         this.studentRepository = studentRepository;
     }
 
+    // this is where the end point's hit
     @GetMapping("/allstu")
     public List<student> getall() {
         return studentRepository.findAll();
