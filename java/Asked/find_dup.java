@@ -12,7 +12,7 @@ public class find_dup {
 		dup(arr);
 	}
 	
-	static void duplicates(int[] arr) { //with extra space
+	static void duplicates(int[] arr) { // with extra space
 		
 		HashSet<Integer> s = new HashSet<>();
 		
@@ -27,7 +27,7 @@ public class find_dup {
 		
 	}
 	
-	static void dup(int[] arr) { //without extra space but o(n2)
+	static void dup(int[] arr) { // without extra space but o(n2)
 		
 		for(int i=0; i<arr.length; i++) {
 			for(int j= i+1; j<arr.length; j++) {
