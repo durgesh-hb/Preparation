@@ -72,7 +72,7 @@ public class implement_stack_using_array {
 		// TODO Auto-generated method stub
 		
 		stack s=new stack(5);
-//		s.push(10);
+		s.push(10);
 //		s.push(20);
 //		s.push(30);
 		
