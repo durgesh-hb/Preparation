@@ -1,15 +1,15 @@
 package questions.linkedlist;
 
 public class rotate_linkedlist {
-    node head;  // head of the list
+    ListNode head;  // head of the list
 		
-    static class node{
+    static class ListNode{
        
        int data;
-       node next;
+       ListNode next;
        
        // constructor
-       node(int data){
+       ListNode(int data){
            this.data=data;
            this.next=null;
        }
