@@ -16,10 +16,11 @@ public class maximum_product_subarray {
         int ans = Integer.MIN_VALUE;;;
 
         for(int i=0; i<nums.length; i++){
-
+            // prefix start -> end
             if(prefix == 0) prefix = 1;
             if(suffix == 0) suffix = 1;
-
+            // suffix end -> start
+            
             prefix *= nums[i];
             suffix *= nums[nums.length -1 -i];
 
