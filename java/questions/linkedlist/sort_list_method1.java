@@ -1,15 +1,15 @@
 package questions.linkedlist;
 
 public class sort_list_method1 {
-    node head;  // head of the list
+    ListNode head;  // head of the list
 		
-    static class node{
+    static class ListNode{
        
        int data;
-       node next;
+       ListNode next;
        
        // constructor
-       node(int data){
+       ListNode(int data){
            this.data=data;
            this.next=null;
        }
