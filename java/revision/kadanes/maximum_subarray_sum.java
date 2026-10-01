@@ -15,7 +15,7 @@ public class maximum_subarray_sum{
         int max = nums[0];
 
         for(int i = 1; i < nums.length; i++){
-
+            // start new or continue with pervious sum with current value
             current = Math.max(nums[i], current + nums[i]);
 
             max = Math.max(max, current);
