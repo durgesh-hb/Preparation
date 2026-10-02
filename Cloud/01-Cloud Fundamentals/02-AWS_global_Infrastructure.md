@@ -73,7 +73,7 @@ Purpose:
           ┌───────────────────┼───────────────────┐
           │                   │                   │
        Regions         Availability Zones     Edge Locations
-     (Geographic)      (Data Centers)       (Near Users)
+     (Geographic)       (Data Centers)         (Near Users)
 ```
 <h3>Region vs Availability Zone vs Edge Location</h3>
 
