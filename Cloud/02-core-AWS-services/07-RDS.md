@@ -49,8 +49,6 @@ AWS manages many infrastructure tasks such as:
 - Monitoring
 - Recovery
 
-This allows developers to focus on the **application and database design** instead of managing the database server.
-
 <h2>Why Do We Need DynamoDB If RDS Exists?</h2>
 
 RDS and DynamoDB solve **different database problems**.
