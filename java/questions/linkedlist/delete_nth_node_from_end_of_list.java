@@ -1,4 +1,4 @@
-package questions.linkedlist;
+package linked_list;
 
 public class delete_nth_node_from_end_of_list {
 	
@@ -62,6 +62,43 @@ public class delete_nth_node_from_end_of_list {
 		slow.next=slow.next.next;
 		head=dummy.next;
 	}
+	
+	// delete the head o(1)
+	public void head_delete() {
+		
+		if(head == null) {
+			System.out.println("liked list is empty!");
+		}
+		
+		head = head.next;
+		
+	}
+	
+	// delete the tail O(n)
+	public void delete_tail() {
+		
+		if(head == null) {
+			System.out.println("liked list is empty!");
+			return;
+		}
+		
+		// Single-node list edge case handling
+		if(head.next == null) {
+			System.out.println("linkedlist has only one node!");
+			head = null;
+			return;
+		}
+
+		
+		node last = head;
+		while(last.next.next != null) {
+						
+			last = last.next;
+		}
+		
+		last.next = null;
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -69,23 +106,26 @@ public class delete_nth_node_from_end_of_list {
 		delete_nth_node_from_end_of_list list = new delete_nth_node_from_end_of_list();
 		
 		list.append(10);
-		list.append(20);
-		list.append(30);
-		list.append(40);
+//		list.append(20);
+//		list.append(30);
+//		list.append(40);
 		
 		System.out.println("Linked list");
 		list.display();
 		
-		list.delete(4);
+		//list.delete(4);
 		
-		System.out.println("After");
-		list.display();
+		//System.out.println("After");
+		//list.display();
 		
 //		Linked list
 //		10 -> 20 -> 30 -> 40 -> null
 //		After
 //		10 -> 30 -> 40 -> null
 
+		list.delete_tail();
+		System.out.println("After");
+		list.display();
 		
 	}
 
