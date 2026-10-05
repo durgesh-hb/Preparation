@@ -99,6 +99,29 @@ public class delete_nth_node_from_end_of_list {
 		last.next = null;
 		
 	}
+	
+	// delete at Nth position
+	public void delete_nth(int position) {
+		
+		if(head == null) {
+			System.out.println("Linkedlist is empty");
+			return;
+		}
+		
+		if(position == 1) {
+			head = head.next;
+			return;
+		}
+		
+		node current = head;
+		
+		for(int i=1; i<position-1; i++) {
+			current = current.next;
+		}
+		
+		current.next = current.next.next;
+		
+	}
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
