@@ -15,7 +15,8 @@ public class intersection {
 			this.next=null;
 		}
 	}
-	
+
+	// methode 1
 	public void intersection(node headA, node headB) {
 		
 		HashSet<node> set= new HashSet<>();
@@ -38,6 +39,31 @@ public class intersection {
 		
 		}
 	}
+
+	// methode 2
+	    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+
+        ListNode currentA = headA;
+        ListNode currentB = headB;
+
+        while(currentA != currentB){
+
+            if(currentA != null){
+                currentA = currentA.next;
+            }else{
+                currentA = headB;
+            }
+
+            if(currentB != null){
+                currentB = currentB.next;
+            }else{
+                currentB = headA;
+            }
+
+        }
+        return currentA;
+    }
+
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
