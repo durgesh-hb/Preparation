@@ -41,10 +41,10 @@ public class intersection {
 	}
 
 	// methode 2
-	    public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
+	    public node getIntersectionNode(node headA, node headB) {
 
-        ListNode currentA = headA;
-        ListNode currentB = headB;
+			node currentA = headA;
+			node currentB = headB;
 
         while(currentA != currentB){
 
