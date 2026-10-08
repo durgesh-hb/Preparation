@@ -38,7 +38,7 @@ public class Reverse_Linked_List_II {
         for(int i=0; i<right - left; i++){
 			
             ListNode next = curr.next; // save the current node 
-            curr.next = next.next;    
+            curr.next = next.next;     // make currnet point to next.next mean skip next go to next next
             next.next = before.next;   
             before.next = next;        
         }
