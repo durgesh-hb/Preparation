@@ -39,8 +39,8 @@ public class Reverse_Linked_List_II {
 			
             ListNode next = curr.next; // save the current node 
             curr.next = next.next;     // make currnet point to next.next mean skip next go to next next
-            next.next = before.next;   
-            before.next = next;        
+            next.next = before.next;   // make it point to reverse 3 -> 1
+			before.next = next;        // make left poin to 1 -> 3    
         }
          return dummy.next;
     }
