@@ -33,7 +33,7 @@ public class search_in_linkedlist {
         return false;
         
 
-        // wiht recursion
+        // with recursion
         if(head == null){
             return false;
         }
