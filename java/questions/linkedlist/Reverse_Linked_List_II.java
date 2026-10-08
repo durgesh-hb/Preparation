@@ -36,10 +36,11 @@ public class Reverse_Linked_List_II {
         ListNode curr = before.next;
 
         for(int i=0; i<right - left; i++){
-            ListNode next = curr.next;
-            curr.next = next.next;
-            next.next = before.next;
-            before.next = next;
+			
+            ListNode next = curr.next; // save the current node 
+            curr.next = next.next;    
+            next.next = before.next;   
+            before.next = next;        
         }
          return dummy.next;
     }
