@@ -1,0 +1,44 @@
+package questions.linkedlist;
+
+public class Swap_Nodes_in_Pairs {
+
+    ListNode head;  // head of the list
+		
+    static class ListNode{
+       
+       int data;
+       ListNode next;
+       
+       // constructor
+       ListNode(int data){
+           this.data=data;
+           this.next=null;
+       }
+   }
+
+   public static void main(String[] args) {
+    
+   }
+
+   public ListNode swapPairs(ListNode head) {
+
+    ListNode dummy = new ListNode(0);
+
+    dummy.next = head;
+
+    ListNode prev = dummy;
+
+    while(prev.next != null && prev.next.next != null){
+
+        ListNode first = prev.next;
+        ListNode second = first.next;
+
+        first.next = second.next;
+        second.next = first;
+        prev.next = second;
+        prev = first;
+    }
+    return dummy.next;
+}
+    
+}
