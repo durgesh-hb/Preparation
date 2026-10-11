@@ -34,15 +34,15 @@ public class search_in_linkedlist {
         
 
         // with recursion
-        if(head == null){
-            return false;
-        }
+        // if(head == null){
+        //     return false;
+        // }
         
-        if(head.data == key){
-            return true;
-        }
+        // if(head.data == key){
+        //     return true;
+        // }
         
-        return searchKey(head.next , key);
+        // return searchKey(head.next , key);
     }
     
 }
