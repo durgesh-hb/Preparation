@@ -8,7 +8,7 @@ public class maximum_subarray_sum {
         int[] arr = {2, 3, 1, 2, 4, 3};
         int target = 7;
 
-        System.out.println(maxi(arr, target));
+        System.out.println(max(arr, target));
     }
 
 // 	MINIMUM SIZE
