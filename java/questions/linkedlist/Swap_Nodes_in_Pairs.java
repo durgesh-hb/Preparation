@@ -33,6 +33,7 @@ public class Swap_Nodes_in_Pairs {
         ListNode first = prev.next;
         ListNode second = first.next;
 
+        // see the notes for better understading
         first.next = second.next;
         second.next = first;
         prev.next = second;
