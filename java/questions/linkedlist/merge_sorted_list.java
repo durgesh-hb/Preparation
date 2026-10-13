@@ -70,6 +70,8 @@ public class merge_sorted_list {
         }
 
         // Attach remaining nodes
+        // tail.next = list2 attaches the entire remaining linked list, not just one node.
+
         if (l1 != null) {
             tail.next = l1;
         }
