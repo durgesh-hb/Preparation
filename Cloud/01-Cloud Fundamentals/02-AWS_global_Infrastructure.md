@@ -53,6 +53,7 @@ If one AZ fails, applications running in another AZ continue to work.
 <h2>3. Edge Location</h2>
 
 > **Definition:** Edge Locations are AWS locations placed closer to users to deliver content with low latency.
+> An Edge Location is a site in AWS's global delivery infrastructure that CloudFront uses to cache and deliver content closer to users.
 
 Used by services like:
 
