@@ -13,7 +13,7 @@ public class Productof_Array_Except_Self {
 
 		 
 	}
-
+	// prefix and suffix method 
 	static int[] prod(int[] arr){
 
 		int n = arr.length;
