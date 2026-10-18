@@ -4,7 +4,7 @@
 
 > **Definition:** A distribution is the CloudFront configuration that defines how content is delivered to users.
 
-It includes settings for caching, origins, HTTPS, and request handling.
+It includes settings for caching, origins, HTTPS, and request handling
 
 <h3>How It Works</h3>
 
