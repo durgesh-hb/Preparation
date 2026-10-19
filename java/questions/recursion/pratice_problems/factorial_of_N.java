@@ -1,3 +1,5 @@
+package questions.recursion.pratice_problems;
+
 public class factorial_of_N {
 
     public static void main(String[] args) {
