@@ -6,6 +6,7 @@ public class Climbing_Stairs {
         
     }
 
+    // instead of calling overlapping recursion calls used the stored prev values
     public int climbStairs(int n) {
 
         if(n <= 2){
