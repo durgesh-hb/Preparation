@@ -12,6 +12,7 @@ public class house_robber {
     }
 
     public int solve(int i, int[] nums, int[] dp) {
+        // base case
         if (i < 0) {
             return 0;
         }
