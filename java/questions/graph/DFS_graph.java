@@ -55,7 +55,7 @@ public class DFS_graph {
 		
 	}
 	
-	// Depth first
+	// Depth first (BFS)
 	static void DFS_graph(ArrayList<ArrayList<Integer>> graph,
 												  int current, 
 												  boolean[] visited) {
