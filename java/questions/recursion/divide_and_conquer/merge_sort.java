@@ -17,7 +17,7 @@ public class merge_sort {
 
         int mid = left + (right - left) / 2;
 
-        //Left sort
+        //Left sorting
         mergesort(arr, left, mid);
         // Right sort 
         mergesort(arr, mid + 1, right);
