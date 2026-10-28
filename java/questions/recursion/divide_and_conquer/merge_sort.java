@@ -19,7 +19,7 @@ public class merge_sort {
 
         //Left sorting
         mergesort(arr, left, mid);
-        // Right sort 
+        // Right sorting
         mergesort(arr, mid + 1, right);
 
         merge(arr, left, mid, right);
