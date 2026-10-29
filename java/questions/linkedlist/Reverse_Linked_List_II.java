@@ -23,6 +23,7 @@ public class Reverse_Linked_List_II {
 
     public ListNode reverseBetween(ListNode head, int left, int right) {
 
+        // dummy node
         ListNode dummy = new ListNode(0);
 
         dummy.next = head;
