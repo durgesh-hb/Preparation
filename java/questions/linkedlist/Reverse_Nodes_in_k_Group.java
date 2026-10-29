@@ -2,6 +2,19 @@ package questions.linkedlist;
 
 public class Reverse_Nodes_in_k_Group {
 
+    node head;  // head of the list
+		
+    static class node{
+       
+       int data;
+       node next;
+       
+       // constructor
+       node(int data){
+           this.data=data;
+           this.next=null;
+       }
+   }
     public static void main(String[] args) {
         
     }
