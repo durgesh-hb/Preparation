@@ -1,6 +1,19 @@
 package questions.linkedlist;
 
 public class sort_list_method1 {
+    node head;  // head of the list
+		
+    static class node{
+       
+       int data;
+       node next;
+       
+       // constructor
+       node(int data){
+           this.data=data;
+           this.next=null;
+       }
+   }
     public static void main(String[] args) {
         
     }
