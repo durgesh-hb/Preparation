@@ -1,5 +1,7 @@
 package questions.linkedlist;
 
+import java.util.Collections;
+
 public class sort_list_method2 {
 
     public static void main(String[] args) {
