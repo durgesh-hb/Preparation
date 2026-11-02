@@ -52,7 +52,7 @@ public class sort_list_method1 {
 
        while(list1 != null && list2 != null){
 
-            if(list1.val < list2.val){
+            if(list1.data < list2.data){
                 tail.next = list1;
                 list1 = list1.next; 
             }else{
