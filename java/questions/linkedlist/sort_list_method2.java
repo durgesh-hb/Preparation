@@ -4,15 +4,15 @@ import java.util.Collections;
 
 public class sort_list_method2 {
 
-    node head;  // head of the list
+    ListNode head;  // head of the list
 		
-    static class node{
+    static class ListNode{
        
        int data;
-       node next;
+       ListNode next;
        
        // constructor
-       node(int data){
+       ListNode(int data){
            this.data=data;
            this.next=null;
        }
@@ -32,7 +32,7 @@ public class sort_list_method2 {
         ListNode curr = head;
 
         while(curr != null){
-            list.add(curr.val);
+            list.add(curr.data);
             curr = curr.next;
         }
 
@@ -42,7 +42,7 @@ public class sort_list_method2 {
         int index = 0;
 
         while(curr != null){
-            curr.val = list.get(index++);
+            curr.data = list.get(index++);
             curr = curr.next;
         }
         return head;
