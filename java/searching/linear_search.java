@@ -27,7 +27,7 @@ public class linear_search {
                 return index;
             }
         }
-        // if no elements found matching with target then retrun the -1
+        
         return -1;
     }
 
