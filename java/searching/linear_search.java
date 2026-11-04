@@ -17,7 +17,7 @@ public class linear_search {
     }
 
     static int linearsearch(int[] arr, int target){
-        // retruns -1 if array in empty
+        
         if(arr.length==0){
             return -1; 
         }
