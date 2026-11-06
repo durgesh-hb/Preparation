@@ -90,6 +90,12 @@ from Employees e
 join projects p
 on e.EmpId = p.EmpID;
 
+select e.EmpName
+from Employees e
+join projects p
+on e.EmpID = p.EmpId
+where p.Budget > 100000;
+
 select p.ProjectName, e.Department
 from Employees e
 join projects p
