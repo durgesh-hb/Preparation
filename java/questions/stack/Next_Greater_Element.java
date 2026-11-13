@@ -1,8 +1,10 @@
 package questions.stack;
 
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Stack;
 
 public class Next_Greater_Element {
     public static void main(String[] args) {
@@ -44,5 +46,30 @@ public class Next_Greater_Element {
 		}
 		return ans;
 	}
+
+	public ArrayList<Integer> nextLargerElement(int[] arr) {
+
+        int n = arr.length;
+        ArrayList<Integer> list = new ArrayList<>();
+        
+        for(int i=0; i<n; i++){
+            list.add(-1);
+        }
+        
+        Stack<Integer> stack = new Stack<>();
+        
+        for(int i=n-1; i>=0; i--){
+            
+            while(!stack.isEmpty() && stack.peek() <= arr[i]){
+                stack.pop();
+            }
+            
+            if(!stack.isEmpty()){
+                list.set(i, stack.peek());
+            }
+            stack.push(arr[i]);
+        }
+        return list;
+    }
 
 }
