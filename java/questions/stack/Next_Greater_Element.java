@@ -15,7 +15,7 @@ public class Next_Greater_Element {
  		int[] ans = next_greate(arr1, arr2);
  		System.out.println(Arrays.toString(ans));
 	}
-	
+	//leetcode
 	static int[] next_greate(int[] arr1, int[] arr2) {
 		
 		ArrayDeque<Integer> stack = new ArrayDeque<>();
@@ -47,8 +47,9 @@ public class Next_Greater_Element {
 		return ans;
 	}
 
+	//GFG
 	public ArrayList<Integer> nextLargerElement(int[] arr) {
-
+		// solution from rising brains
         int n = arr.length;
         ArrayList<Integer> list = new ArrayList<>();
         
