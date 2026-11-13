@@ -49,7 +49,7 @@ public class Next_Greater_Element {
 
 	//GFG
 	public ArrayList<Integer> nextLargerElement(int[] arr) {
-		// solution from rising brains
+		// solution from rising brains(remember backwards)
         int n = arr.length;
         ArrayList<Integer> list = new ArrayList<>();
         
@@ -72,5 +72,34 @@ public class Next_Greater_Element {
         }
         return list;
     }
+
+	// for same leetcode prob using rising brain solution (remember backwards)
+	public int[] nextGreaterElement(int[] arr1, int[] arr2) {
+        
+        int n = arr2.length;
+
+        Stack<Integer> stack = new Stack<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+
+        for(int i = n-1; i>=0; i--){
+
+            while(!stack.isEmpty() && stack.peek() <= arr2[i]){
+                stack.pop();
+            }
+
+            if(!stack.isEmpty()){
+                map.put(arr2[i], stack.peek());
+            }else{
+                map.put(arr2[i], -1);
+            }
+            stack.push(arr2[i]);
+        }
+
+        int[] ans = new int[arr1.length];
+        for(int i=0; i<arr1.length; i++){
+            ans[i] = map.get(arr1[i]);
+        }
+        return ans;
+	}
 
 }
