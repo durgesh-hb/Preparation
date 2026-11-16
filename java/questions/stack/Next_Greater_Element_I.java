@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Stack;
 
-public class Next_Greater_Element {
+public class Next_Greater_Element_I {
     public static void main(String[] args) {
 		// TODO Auto-generated method stub
 			
