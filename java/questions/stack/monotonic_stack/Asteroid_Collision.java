@@ -9,7 +9,8 @@ public class Asteroid_Collision {
         
     }
 
-    public int[] asteroidCollision(int[] asteroids) {
+    // brute  froce
+    public int[] asteroidCollision1(int[] asteroids) {
 
         List<Integer> list = new ArrayList<>();
         for(int num : asteroids) list.add(num);
@@ -40,6 +41,31 @@ public class Asteroid_Collision {
         int[] ans = new int[list.size()];
         for(int j=0; j<list.size(); j++){
             ans[j] = list.get(j);
+        }
+        return ans;
+    }
+
+    // optimal
+    public int[] asteroidCollision(int[] asteroids) {
+
+        Stack<Integer> stack = new Stack<>();
+
+        for(int a : asteroids){
+            while(!stack.isEmpty() && a < 0 && stack.peek() > 0 && stack.peek() < -a){
+                stack.pop();
+            }
+
+            if(!stack.isEmpty() && a < 0 && stack.peek() > 0){
+                if(stack.peek() == -a){
+                    stack.pop();
+                }
+            }else{
+                stack.push(a);
+            }
+        }
+        int[] ans = new int[stack.size()];
+        for(int i=stack.size()-1; i>=0; i--){
+            ans[i] = stack.pop();
         }
         return ans;
     }
