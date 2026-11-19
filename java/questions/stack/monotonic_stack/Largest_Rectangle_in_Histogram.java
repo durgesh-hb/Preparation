@@ -6,7 +6,8 @@ public class Largest_Rectangle_in_Histogram {
         
     }
     
-    public int largestRectangleArea(int[] heights) {
+    // brute force 
+    public int largestRectangle(int[] heights) {
 
         int maxarea = 0;
         for(int i=0; i<heights.length; i++){
@@ -22,6 +23,7 @@ public class Largest_Rectangle_in_Histogram {
         return maxarea;
     }
 
+    // optimized
     public int largestRectangleArea(int[] heights) {
 
         int maxarea = 0;
