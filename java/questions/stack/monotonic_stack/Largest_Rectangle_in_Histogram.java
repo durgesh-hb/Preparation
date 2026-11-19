@@ -1,5 +1,7 @@
 package questions.stack.monotonic_stack;
 
+import java.util.Stack;
+
 public class Largest_Rectangle_in_Histogram {
 
     public static void main(String[] args) {
